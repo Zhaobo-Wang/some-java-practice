@@ -8,7 +8,9 @@ public class App {
 		// TODO Auto-generated method stub
 		
 		Random rand = new Random();
-		String[] names = {"Chris","Jimbo","Evangeline","bob","lyla","jack","clary"};
+		String[] names = {"Chris","Jimbo","Evangeline","bob","lyla","jack","clary","ken","frank","luck"};		
+		Laptop laptop1 = new Laptop("MacBook",1850.50);
+		Laptop laptop2 = new Laptop("HP",1300);
 		
 		School McMaster = new School("McMaster");
 		
@@ -16,7 +18,7 @@ public class App {
 		
 		for (int i = 0; i < McMaster.getStudents().length; i++) {
 			
-			McMaster.getStudents()[i] = new Student(names[rand.nextInt(names.length)]); 
+			McMaster.getStudents()[i] = new Student(names[rand.nextInt(names.length)],laptop1); 
 
 		}
 		
