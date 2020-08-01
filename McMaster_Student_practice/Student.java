@@ -8,20 +8,21 @@ public class Student {
 	
 	private String name;
 	
-	private Laptop laptop; //从别的class里面提取object
+	private Laptop laptop;
 	
 	public Student() {
 		
 		count ++;
 		
-		laptop = new Laptop();//需要创建 laptop
+		laptop = new Laptop();
 				
 	}
 
-	public Student(String name) {
-		this();// 首先会运行 default constructor
+	public Student(String name, Laptop laptop) {
+		this();// run this class default constructor
 		this.id = count;
 		this.name = name;
+		this.laptop = laptop;
 	}
 
 	public int getId() {
@@ -58,8 +59,9 @@ public class Student {
 	
 	public String studentInfo() {
 		
-		return "Student: " + name + "\nID:" + id+ ""+"\n"+ laptop.LaptopInfo();
+		return "...............\nStudent: " + name + "\nID:" + id+ ""+"\n"+ laptop.LaptopInfo();
 	}
 	
 
 }
+
